@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  rmi-server:
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rmi-server
+    command: java -classpath build:libs/tomcat-catalina-8.5.3.jar:libs/tomcat-embed-el-8.5.3.jar RmiServer
+    ports:
+      - "1099:1099"
+  rmi-client:
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rmi-client
+    depends_on:
+      - rmi-server
