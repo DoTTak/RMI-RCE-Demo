@@ -3,6 +3,14 @@ ref. https://github.com/zer0-map/JNDI-Injection-Series/tree/main
 
 ![image-001](/images/img-001.png)
 
+## 요구사항
+```bash
+$ java -version
+openjdk version "1.8.0_181"
+OpenJDK Runtime Environment (Zulu 8.31.0.1-macosx) (build 1.8.0_181-b02)
+OpenJDK 64-Bit Server VM (Zulu 8.31.0.1-macosx) (build 25.181-b02, mixed mode)
+```
+
 ## 설치 및 공격자 리버스 셸 대기
 
 1. docker-compose 실행
